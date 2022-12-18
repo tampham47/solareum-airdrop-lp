@@ -37,7 +37,7 @@ export const Header = () => {
   return (
     <ScContainer>
       <ScHeaderWrp>
-        <ScLogoLink>
+        <ScLogoLink href="https://solareum.app">
           <ScHeaderLogo src="./images/Logo-XSB-P.png" alt="Solareum Logo" />
         </ScLogoLink>
         <ScHeaderRight>

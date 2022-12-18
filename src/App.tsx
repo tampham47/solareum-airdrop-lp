@@ -62,7 +62,6 @@ const App = () => {
               style={{ width: 280, marginLeft: 'auto', marginRight: 'auto' }}
             />
             <ScTitle>Hold XSB to receive airdrop&nbsp;daily</ScTitle>
-
             <ScSection>
               <p>
                 Every day you need to show up here to receive a distribution of
