@@ -3,9 +3,8 @@ import styled from 'styled-components';
 export const Section = styled.section``;
 
 export const Container = styled.div`
-  min-width: 350px;
   max-width: 1140px;
-  width: calc(100% - 40px);
+  width: calc(100% - 48px);
   margin-left: auto;
   margin-right: auto;
   margin-top: 3em;
