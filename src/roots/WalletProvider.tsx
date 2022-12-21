@@ -11,7 +11,9 @@ import {
   PhantomWalletAdapter,
   Coin98WalletAdapter,
   BraveWalletAdapter,
-  CoinbaseWalletAdapter,
+  SolletExtensionWalletAdapter,
+  SolflareWalletAdapter,
+  TrustWalletAdapter,
 } from '@solana/wallet-adapter-wallets';
 require('@solana/wallet-adapter-react-ui/styles.css');
 
@@ -38,8 +40,10 @@ export const MyWalletProvider: FC<{ children: ReactNode }> = ({ children }) => {
        */
       new PhantomWalletAdapter(),
       new Coin98WalletAdapter(),
+      new SolletExtensionWalletAdapter(),
+      new TrustWalletAdapter(),
+      new SolflareWalletAdapter(),
       new BraveWalletAdapter(),
-      new CoinbaseWalletAdapter(),
     ],
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [network]
