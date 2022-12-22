@@ -68,6 +68,7 @@ export const Airdrop = () => {
         method: 'POST',
         body: JSON.stringify({
           solAddress: publicKey?.toBase58(),
+          meta: { deviceId: 'web' },
         }),
       }).then((resp) => resp.json());
 
@@ -88,6 +89,7 @@ export const Airdrop = () => {
       method: 'POST',
       body: JSON.stringify({
         solAddress: publicKey?.toBase58(),
+        meta: { deviceId: 'web' },
       }),
     })
       .then((resp) => resp.json())
@@ -99,9 +101,10 @@ export const Airdrop = () => {
   };
 
   useEffect(() => {
+    if (!publicKey) return;
     checkMission();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [publicKey]);
 
   return (
     <Container>
