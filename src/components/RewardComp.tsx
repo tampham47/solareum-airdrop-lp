@@ -6,7 +6,6 @@ import { ScOutlineButton } from './Button';
 import diamon from '../lottie-files/diamond-in-hand.json';
 
 const ScMain = styled.div`
-  min-width: 380px;
   max-width: 420px;
   padding: 24px;
   background: black;
@@ -14,6 +13,10 @@ const ScMain = styled.div`
   text-align: center;
 
   label {
+  }
+
+  @media only screen and (min-width: 1024px) {
+    min-width: 380px;
   }
 `;
 
