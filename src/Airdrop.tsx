@@ -45,8 +45,9 @@ type Reward = {
   rewardRate: number;
 };
 
-// const API_ENDPOINT = 'http://localhost:3030/api/v1';
 const API_ENDPOINT = 'https://xsb.solareum.app/api/v1';
+// const API_ENDPOINT = 'https://xsb-stg.solareum.app/api/v1';
+// const API_ENDPOINT = 'http://localhost:3030/api/v1';
 
 export const Airdrop = () => {
   const [loading, setLoading] = useState<boolean>(false);

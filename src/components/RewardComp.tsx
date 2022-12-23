@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import Lottie from 'lottie-react';
+import { X } from 'react-feather';
 
-import { ScButton } from './Button';
+import { ScOutlineButton } from './Button';
 import diamon from '../lottie-files/diamond-in-hand.json';
 
 const ScMain = styled.div`
@@ -25,6 +26,23 @@ const ScText = styled.h3`
   color: #ffbf00;
 `;
 
+const ScCloseButton = styled.button`
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  height: 36px;
+  transition: all 0.3s;
+
+  &:hover {
+    background: #ff33ff;
+  }
+`;
+
 export const RewardComp = ({
   value,
   signature,
@@ -36,6 +54,9 @@ export const RewardComp = ({
 }) => {
   return (
     <ScMain>
+      <ScCloseButton onClick={close}>
+        <X size={24} />
+      </ScCloseButton>
       <Lottie
         animationData={diamon}
         loop={true}
@@ -43,7 +64,7 @@ export const RewardComp = ({
       />
       <label htmlFor="">You Received</label>
       <ScText>{value} XSB</ScText>
-      <ScButton
+      <ScOutlineButton
         disabled={!signature}
         href={`https://solscan.io/tx/${signature}`}
         onClick={() => {
@@ -51,7 +72,7 @@ export const RewardComp = ({
         }}
       >
         Check
-      </ScButton>
+      </ScOutlineButton>
     </ScMain>
   );
 };

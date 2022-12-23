@@ -19,8 +19,22 @@ export const ScButton = styled(UniversalButton)`
   min-width: 240px;
   background: #ff33ff;
   cursor: pointer;
+  transition: all 0.3s;
 
   &:hover {
+  }
+
+  &:disabled {
+    filter: grayscale(1);
+  }
+`;
+
+export const ScOutlineButton = styled(ScButton)`
+  border: 1px dashed #ff33ff;
+  background: transparent;
+
+  &:hover {
+    background: #ff33ff;
   }
 
   &:disabled {
